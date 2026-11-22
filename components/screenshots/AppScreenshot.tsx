@@ -105,47 +105,14 @@ function HomeScreen() {
 }
 
 function PrayerScreen() {
-  const prayers = [
-    { name: 'Fajr', time: '5:12 AM', icon: Sunrise, done: true },
-    { name: 'Dhuhr', time: '12:18 PM', icon: CloudSun, done: true },
-    { name: 'Asr', time: '3:47 PM', icon: Sun, done: true },
-    { name: 'Maghrib', time: '6:52 PM', icon: Sunset, done: false },
-    { name: 'Isha', time: '8:20 PM', icon: Moon, done: false },
-  ];
   return (
-    <ScreenShell>
-      <p className="eyebrow">Deen</p>
-      <h3 className="mt-1 font-serif text-2xl text-espresso">Today&apos;s Salah</h3>
-      <div className="mt-4 space-y-2">
-        {prayers.map((p) => (
-          <div
-            key={p.name}
-            className="flex items-center justify-between rounded-xl card-surface grain-border px-3.5 py-3"
-          >
-            <div className="flex items-center gap-3">
-              <div className="flex h-8 w-8 items-center justify-center rounded-full bg-sand/60">
-                <p.icon className="h-4 w-4 text-espresso-soft" />
-              </div>
-              <div>
-                <p className="font-sans text-xs font-semibold text-espresso">{p.name}</p>
-                <p className="text-[10px] text-espresso-soft/60">{p.time}</p>
-              </div>
-            </div>
-            {p.done ? (
-              <CheckCircle2 className="h-4 w-4 text-sage" />
-            ) : (
-              <Circle className="h-4 w-4 text-taupe/40" />
-            )}
-          </div>
-        ))}
-      </div>
-      <div className="mt-4 rounded-xl bg-espresso/[0.04] p-3.5">
-        <p className="text-[10px] font-sans font-semibold uppercase tracking-wide2 text-taupe-dark">
-          Sunnah &amp; Adhkar
-        </p>
-        <p className="mt-1 text-xs text-espresso-soft">Morning Adhkar · Evening Adhkar · Witr</p>
-      </div>
-    </ScreenShell>
+    <Image
+      src="/images/prayerTracker.png"
+      alt="Prayer tracker"
+      width={1320}
+      height={1921}
+      className="h-full w-full object-cover object-top"
+    />
   );
 }
 
