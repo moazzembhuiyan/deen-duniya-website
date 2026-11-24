@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0F172A,50:1E3A8A,100:38BDF8&height=180&section=header&text=Deen%20in%20Dunya&fontSize=40&fontColor=ffffff&fontAlignY=36&desc=Islamic%20lifestyle%20%26%20wellness%20app%20%E2%80%94%20website&descAlignY=58&descSize=16" alt="Deen in Dunya" />
+<img src=".github/banner.svg" width="100%" alt="Deen in Dunya — Islamic lifestyle & wellness app — website" />
 
 <p><b>🌐 Marketing Website</b></p>
 
