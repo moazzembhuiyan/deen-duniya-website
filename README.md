@@ -1,95 +1,98 @@
-# Deen in Dunya — Marketing Website
+<div align="center">
 
-A premium, minimal marketing site for **Deen in Dunya**, an Islamic lifestyle
-and wellness app. Built with Next.js 15 (App Router), TypeScript, Tailwind
-CSS and Framer Motion.
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0F172A,50:1E3A8A,100:38BDF8&height=180&section=header&text=Deen%20in%20Dunya&fontSize=40&fontColor=ffffff&fontAlignY=36&desc=Islamic%20lifestyle%20%26%20wellness%20app%20%E2%80%94%20website&descAlignY=58&descSize=16" alt="Deen in Dunya" />
 
-## Getting started
+<p><b>🌐 Marketing Website</b></p>
+
+<p>
+  <img src="https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white" alt="Next.js" />
+  <img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript" />
+  <img src="https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white" alt="Tailwind CSS" />
+  <img src="https://img.shields.io/badge/Framer_Motion-0055FF?style=for-the-badge&logo=framer&logoColor=white" alt="Framer Motion" />
+</p>
+
+</div>
+
+## 📖 Overview
+
+A premium, minimal marketing website for **Deen in Dunya**, an Islamic lifestyle and wellness app. Built for speed and SEO with the **Next.js App Router**, smooth **Framer Motion** animations and a fully responsive layout.
+
+## ✨ Key Features
+
+- Animated hero, features, lifestyle & audience sections
+- App screenshots showcase & download section (App Store / Play Store)
+- Waitlist sign-up section
+- Support, Privacy Policy, Terms and **Delete Account** pages (store-compliant)
+- SEO ready — sitemap, robots.txt and dynamic Open Graph image
+- Fully responsive, mobile-first design
+
+## 🛠️ Tech Stack
+
+| Category | Technology |
+|---|---|
+| **Framework** | Next.js 16 (App Router) · React 19 |
+| **Language** | TypeScript |
+| **Styling** | Tailwind CSS |
+| **Animation** | Framer Motion |
+| **Icons** | Lucide React |
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- Node.js 18+ and npm
+
+### Installation
 
 ```bash
+git clone https://github.com/moazzembhuiyan/deen-duniya-website.git
+cd deen-duniya-website
 npm install
+```
+
+### Run
+
+```bash
 npm run dev
+# open http://localhost:3000
 ```
 
-Then open [http://localhost:3000](http://localhost:3000).
+## 📜 Available Scripts
 
-> **Note:** `next/font/google` fetches font files from Google Fonts at build
-> time, so `npm run build` requires an internet connection. This is normal —
-> it will build cleanly on your machine or in CI as long as
-> `fonts.googleapis.com` is reachable.
+| Command | Description |
+|---|---|
+| `npm run dev` | Start the development server |
+| `npm run build` | Create a production build |
+| `npm run start` | Run the production build |
+| `npm run lint` | Run ESLint |
 
-## Where to update things
+## 📁 Project Structure
 
-### App Store / Google Play links
-Edit `lib/constants.ts`:
-
-```ts
-export const APP_STORE_URL = "#";   // replace with your App Store URL
-export const GOOGLE_PLAY_URL = "#"; // replace with your Google Play URL
+```text
+app/            # Pages, layout, sitemap, robots, OG image
+components/     # hero, features, lifestyle, screenshots, download, waitlist, footer...
+lib/            # Helpers & content
+public/         # Static assets
 ```
 
-These constants are used everywhere the download buttons appear (hero,
-navbar, final CTA), so you only need to update them in one place.
+## 📝 More Documentation
 
-### Support email
-Also in `lib/constants.ts` — `SUPPORT_EMAIL`.
+Detailed developer notes are available in [`docs/NOTES.md`](docs/NOTES.md).
 
-### App screenshots
-The site currently uses polished, on-brand **placeholder screens** built
-directly in `components/screenshots/AppScreenshot.tsx` (no image files
-required) so every phone mockup already looks complete.
+---
 
-When real product screenshots are ready:
-1. Add PNGs to `public/screenshots/` — suggested names:
-   `home.png`, `prayer.png`, `planner.png`, `wellness.png`, `learn.png`,
-   `reflect.png`.
-2. In `AppScreenshot.tsx`, swap the relevant placeholder `<Screen />`
-   component for a `next/image` reference to the new PNG inside the same
-   `PhoneFrame` shell used elsewhere on the site.
+<div align="center">
 
-### Waitlist form
-`components/waitlist/WaitlistForm.tsx` currently simulates a network
-request and shows a success state. To connect it to a real provider
-(Supabase, Firebase, Resend, Mailchimp, ConvertKit, etc.), replace the
-`await new Promise(...)` line inside `handleSubmit` with your real API call.
+### 👨‍💻 Developed by [Moazzem Hossen Bhuiyan](https://github.com/moazzembhuiyan)
 
-### Legal content
-`app/privacy-policy/page.tsx` and `app/terms/page.tsx` contain
-professional starting drafts. Sections with company-specific or
-jurisdiction-specific requirements are marked with:
+<sub>Mobile App Developer (React Native) • Web Developer</sub>
 
-```
-[Placeholder — to be reviewed and finalised by our legal team]
-```
+<p>
+  <a href="https://github.com/moazzembhuiyan"><img src="https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white" alt="GitHub" /></a>
+  <a href="https://www.linkedin.com/in/moazzem-hossen-bhuiyan-325432331/"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
+  <a href="mailto:moazzembhuiyan394@gmail.com"><img src="https://img.shields.io/badge/Email-EA4335?style=flat-square&logo=gmail&logoColor=white" alt="Email" /></a>
+</p>
 
-Please have these reviewed by a lawyer before launch.
+<sub>⭐ If you like this project, consider giving it a star!</sub>
 
-## Routes
-
-| Route              | Purpose                          |
-| ------------------- | --------------------------------- |
-| `/`                 | Main marketing site               |
-| `/support`          | Support + FAQ                     |
-| `/privacy-policy`   | Privacy Policy                    |
-| `/terms`            | Terms & Conditions                |
-| `/delete-account`   | Account / data deletion request   |
-
-## Project structure
-
-```
-app/                  Routes (page.tsx per route)
-components/
-  navbar/              Navbar, mobile menu
-  hero/                Hero section, floating cards
-  features/            Feature grid + cards
-  screenshots/          AppScreenshot placeholder screens, showcase section
-  lifestyle/           Intro + lifestyle editorial sections
-  audience/            "Who it's for" section
-  download/            Download buttons, Final CTA
-  waitlist/            Waitlist form
-  footer/              Footer
-  support/             FAQ accordion
-  ui/                  Shared primitives (Button, Container, Logo, PhoneFrame, ornaments, legal layout)
-lib/                  Shared constants
-public/               Static assets (logo, screenshots, images)
-```
+</div>
